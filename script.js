@@ -9,7 +9,7 @@ function makeBubble()
     } 
     pbtm.innerHTML=clutter
 }
-let timer=5
+let timer=60
 function runTimer()
 {
     let timerValue=document.querySelector("#TimerVal")
@@ -24,10 +24,11 @@ function runTimer()
             clearInterval(interval)
             console.log('stop');
             let btmpnl=document.querySelector("#pbtm")
-            btmpnl.innerHTML="<h2>Game Over </h2>"
+            btmpnl.innerHTML=`
+                <h2>Game Over </h2>
+                <div class="colorBlack">Your Score is ${document.querySelector("#scoreVal").innerHTML}</div>
+            `
             
-
-        
             
         }
     }, 1000);
@@ -60,9 +61,6 @@ document.querySelector("#pbtm").addEventListener("click",(e)=>{
     
 })
 
-
-
 makeBubble()
 runTimer();
 getNewHit()
-

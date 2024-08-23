@@ -62,12 +62,14 @@ html,body{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    display: flex;
+    
     justify-content: center;
     align-items: center;
+
 }
-#pbtm h2{
+#pbtm h2,.colorBlack{
     color: black;
+
 }
 #bubble{
     height: 40px;
